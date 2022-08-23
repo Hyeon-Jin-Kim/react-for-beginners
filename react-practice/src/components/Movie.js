@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Detail from "./routes/Detail";
+import Home from "./routes/Home";
 
-function Movie({ title, mediumCoverImage, summary, genres }) {
+function Movie({ title, coverImage, summary, genres }) {
   return (
     <div>
-      <img src={mediumCoverImage} alt={title} />
+      <img src={coverImage} alt={title} />
       <h2>
         <Link to='/movie'>{title}</Link>
       </h2>
@@ -19,7 +22,7 @@ function Movie({ title, mediumCoverImage, summary, genres }) {
 }
 
 Movie.propTypes = {
-  mediumCoverImage: PropTypes.string.isRequired,
+  coverImage: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
