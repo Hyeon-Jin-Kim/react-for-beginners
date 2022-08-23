@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Detail from "./routes/Detail";
-import Home from "./routes/Home";
+import { BrowserRouter, Routes, Route, Routers } from "react-router-dom";
+import Detail from "scr/routes/Detail";
+import Home from "scr/routes/Home";
 
 function Movie({ title, coverImage, summary, genres }) {
   return (
